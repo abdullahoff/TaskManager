@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   title: string = 'Task Manager';
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }

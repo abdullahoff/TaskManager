@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Task} from '../../Task';
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-item',
@@ -6,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task-item.component.css']
 })
 export class TaskItemComponent implements OnInit {
+  @Input() task: Task;
+  faTimes = faTimes;
 
-  constructor() { }
+  constructor() { 
+    this.task = {
+      id: 1,
+      text: 'Doctors Appointment',
+      day: 'May 5th at 2:30pm',
+      reminder: true,
+    } 
+  }
 
   ngOnInit(): void {
   }
